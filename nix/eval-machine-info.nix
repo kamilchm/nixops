@@ -268,6 +268,7 @@ rec {
           ec2 = optionalAttrs (v.config.deployment.targetEnv == "ec2") v.config.deployment.ec2;
           gce = optionalAttrs (v.config.deployment.targetEnv == "gce") v.config.deployment.gce;
           hetzner = optionalAttrs (v.config.deployment.targetEnv == "hetzner") v.config.deployment.hetzner;
+          cloudsigma = optionalAttrs (v.config.deployment.targetEnv == "cloudsigma") v.config.deployment.cloudsigma;
           container = optionalAttrs (v.config.deployment.targetEnv == "container") v.config.deployment.container;
           route53 = v.config.deployment.route53;
           virtualbox =

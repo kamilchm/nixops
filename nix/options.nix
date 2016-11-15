@@ -21,6 +21,7 @@ in
       ./keys.nix
       ./gce.nix
       ./hetzner.nix
+      ./cloudsigma.nix
       ./container.nix
       ./libvirtd.nix
     ];

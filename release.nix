@@ -8,6 +8,15 @@ let
 
   version = "1.5" + (if officialRelease then "" else "pre${toString nixopsSrc.revCount}_${nixopsSrc.shortRev}");
 
+  libcloud = pkgs.lib.overrideDerivation pkgs.python2Packages.libcloud (oldAttrs: {
+    src = pkgs.fetchFromGitHub {
+      owner = "kamilchm";
+      repo = "libcloud";
+      rev = "cloudsigma-v1";
+      sha256 = "19gx5ll79cw93b48fsj7j4p4xpan8cz4r32ahxpsdlym8c6k6fy2";
+    };
+  });
+
 in
 
 rec {
